@@ -3,7 +3,6 @@ import cors from 'cors';
 import express from 'express';
 
 import routes from './routes';
-import response from './helpers/response';
 import ApplicationError from './helpers/Error';
 
 const app = express();
@@ -14,11 +13,16 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/', (req, res) =>
-  res.status(200).json(response.success('Welcome to Phone number generator'))
-);
-
 app.use(routes);
+
+app.get('/', (req, res) =>
+  res.status(200).json({
+    status: 'success',
+    message: `Welcome to Phone numbers generator. Visit '${
+      req.protocol
+    }://${req.get('host')}/generate' to generate unique phone numbers`,
+  })
+);
 
 app.use('*', (req, res, next) => {
   const message =

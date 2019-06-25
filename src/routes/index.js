@@ -3,9 +3,9 @@ import Controller from '../controllers';
 
 const routes = Router();
 
-routes.post('/generate', Controller.generate);
-routes.get('/all', Controller.fetchAll);
-routes.get('/sort', Controller.sort);
-routes.delete('/refresh', Controller.refresh);
+routes.all('/generate', Controller.generate);
+routes.all('/all', Controller.fetchAll);
+routes.all('/sort', Controller.sort);
+routes.all('/refresh', Controller.refresh);
 
 export default routes;
