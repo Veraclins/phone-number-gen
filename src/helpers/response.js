@@ -9,7 +9,7 @@ export default {
     ),
   success: (resource, action, data = {}) => ({
     status: 'success',
-    message: `Awesome! ${sentenceCase(`${resource} ${action} successfully`)}`,
+    message: `${sentenceCase(`${resource} ${action} successfully`)}`,
     data,
   }),
 };
