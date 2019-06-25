@@ -1,0 +1,27 @@
+{
+  "root": true,
+  "extends": ["airbnb-base", "plugin:jest/recommended", "plugin:prettier/recommended"],
+  "plugins": ["prettier"],
+  "env": {
+    "node": true,
+    "jest": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "sourceType": "module"
+  },
+  "rules": {
+    "import/no-unresolved": [2, { "commonjs": true }],
+    "no-shadow": ["error", { "allow": ["req", "res", "err"] }],
+    "no-plusplus": 0,
+    "no-unused-vars": ["error", { "args": "none" }],
+    "curly": ["error", "multi-line"],
+    "import/extensions": 0,
+    "require-jsdoc": 0,
+    "valid-jsdoc": 0
+  },
+  "globals": {
+    "jest": true
+  }
+}
