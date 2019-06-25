@@ -1,0 +1,48 @@
+{
+  "name": "phone-number-gen",
+  "version": "1.0.0",
+  "description": "Phone number generator is a simple application for generating ten digit phone numbers easily",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "heroku-postbuild": "npm run build",
+    "build": "babel src -D --out-dir dist --source-maps",
+    "dev": "nodemon --exec babel-node src",
+    "coverage": "codecov",
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Veraclins/phone-number-gen.git"
+  },
+  "author": "Agada Clinton Innocent (Veracity)",
+  "license": "MIT",
+  "homepage": "https://github.com/Veraclins/phone-number-gen#readme",
+  "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/runtime": "^7.4.5",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "codecov": "^3.5.0",
+    "eslint": "^6.0.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^5.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jest": "^22.7.1",
+    "eslint-plugin-prettier": "^3.1.0",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.1",
+    "prettier": "^1.18.2",
+    "rimraf": "^2.6.3",
+    "supertest": "^4.0.2"
+  }
+}
